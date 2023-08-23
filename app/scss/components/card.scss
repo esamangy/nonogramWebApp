@@ -1,5 +1,104 @@
 @use '../util' as *;
 
+
+.card-grid {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: myrem(30);
+
+    @include breakpoint(medium){
+        grid-template-columns: repeat(2, 1fr);
+    }
+    @include breakpoint(large){
+        grid-template-columns: repeat(4, 1fr);
+    }
+}
+
 .card{
-    padding: myrem(20);
+    background: var(--dark-card-desaturatedblue);
+    color: var(--dark-text1-paleblue);
+    text-align: center;
+    padding: myrem(25);
+    border-radius: myrem(5);
+
+    &--pack1{
+        border-top: myrem(4) solid var(--testgradient-start);
+    }
+    &--pack2{
+        
+    }
+    &--pack3{
+        
+    }
+    &--pack4{
+        
+    }
+
+    &__top{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        margin-bottom: myrem(28);
+    }
+    
+    &__icon{
+        margin-right: myrem(8);
+
+        &--pack1{
+
+        }
+        &--pack2{
+            
+        }
+        &--pack3{
+            
+        }
+        &--pack4{
+            
+        }
+    }
+
+    &__packname{
+        font-size: myrem(12);
+        font-weight: bold;
+    }
+
+    &__progress{
+        margin-bottom: myrem(25);
+
+    }
+
+    &__count{
+        color: var(--dark-text2-white);
+        font-weight: bold;
+        letter-spacing: myrem(-2);
+        margin-bottom: myrem(4);
+
+        &--big{
+            font-size: myrem(56);
+        }
+        &--small{
+
+        }
+    }
+
+    &__label{
+        font-size: myrem(12);
+        letter-spacing: myrem(5);
+        color: var(--dark-text1-paleblue);
+        font-weight: normal;
+        text-transform: uppercase;
+    }
+
+    &__streak{
+        font-size: myrem(12);
+        font-weight: bold;
+
+        &--up{
+            color: var(--limegreen);
+        }
+        &--broken{
+            color: var(--brightred);
+        }
+    }
 }

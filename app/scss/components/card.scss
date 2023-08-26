@@ -15,11 +15,19 @@
 }
 
 .card{
+    position: relative;
+    overflow: hidden;
     background: var(--dark-card-desaturatedblue);
     color: var(--dark-text1-paleblue);
     text-align: center;
     padding: myrem(25);
     border-radius: myrem(5);
+    transition: background 150ms ease-in-out;
+    cursor: pointer;
+
+    &:hover{
+        background: var(--dark-card-hover);
+    }
 
     &--pack1{
         border-top: myrem(4) solid var(--testgradient-start);
@@ -39,6 +47,11 @@
         justify-content: center;
         align-items: center;
         margin-bottom: myrem(28);
+    }
+
+    &__subtitle{
+        font-size: myrem(14);
+        font-weight: bold;
     }
     
     &__icon{
@@ -78,7 +91,7 @@
             font-size: myrem(56);
         }
         &--small{
-
+            font-size: myrem(32);
         }
     }
 

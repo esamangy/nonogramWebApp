@@ -1,0 +1,37 @@
+@use '../util' as *;
+
+.card-puzzle{
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: repeat(2, auto);
+    gap: myrem(10);
+
+    .card__subtitle{
+
+    }
+
+    .card__count{
+        margin-bottom: 0;
+    }
+
+    .card__count, .card__streak{
+        align-self: end;
+    }
+
+    img, .card__streak{
+        justify-self: end;
+    }
+
+    &-easy{
+        border-top: myrem(4) solid var(--puzzle-easy);
+    }
+    &-medium{
+        border-top: myrem(4) solid var(--puzzle-medium);
+    }
+    &-hard{
+        border-top: myrem(4) solid var(--puzzle-hard);
+    }
+    &-veryhard{
+        border-top: myrem(4) solid var(--puzzle-veryhard);
+    }
+}

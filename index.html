@@ -11,9 +11,10 @@
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;700&display=swap" rel="stylesheet">
 
     <link rel="stylesheet" href="dist/style.css">
-    <script defer src="dist/script.js"></script>
+    <script defer src="dist/darkmode.js"></script>
+    <script defer src="dist/index.js"></script>
 </head>
-<body>
+<body onload="indexLoad()">
     <header class="header container">
 
         <div class="header__title">
@@ -33,10 +34,22 @@
         </fieldset>
     </header>
     <main>
-        <section class="container">
+        <section class="container" name="recentpacksection">
             <h2>Continue Packs</h2>
             <div class="card-grid">
-                <div class="card card--pack1">
+                <div class="card card--testpack" id="recentpack1">
+                    <div class="card__top">
+                        <img class="card__icon" src="images/SummerIconSmall.png" alt="summerpack" name="image"/>
+                        <div class="card__packname" name="packname">Summer Pack</div>
+                    </div>
+                    <div class="card__progress">
+                        <div class="card__count card__count--big" name="progress">0%</div>
+                        <div class="card__label">Completed</div>
+                    </div>
+                    <div class="card__streak card__streak--up" name="streak">0 Day Streak</div>
+                </div>
+    
+                <div class="card card--springpack" id="recentpack2">
                     <div class="card__top">
                         <img class="card__icon" src="images/SummerIconSmall.png" alt="summerpack"/>
                         <div class="card__packname">Summer Pack</div>
@@ -48,7 +61,7 @@
                     <div class="card__streak card__streak--up">0 Day Streak</div>
                 </div>
     
-                <div class="card card--pack1">
+                <div class="card card--summerpack" id="recentpack3">
                     <div class="card__top">
                         <img class="card__icon" src="images/SummerIconSmall.png" alt="summerpack"/>
                         <div class="card__packname">Summer Pack</div>
@@ -60,19 +73,7 @@
                     <div class="card__streak card__streak--up">0 Day Streak</div>
                 </div>
     
-                <div class="card card--pack1">
-                    <div class="card__top">
-                        <img class="card__icon" src="images/SummerIconSmall.png" alt="summerpack"/>
-                        <div class="card__packname">Summer Pack</div>
-                    </div>
-                    <div class="card__progress">
-                        <div class="card__count card__count--big">0%</div>
-                        <div class="card__label">Completed</div>
-                    </div>
-                    <div class="card__streak card__streak--up">0 Day Streak</div>
-                </div>
-    
-                <div class="card card--pack1">
+                <div class="card card--fallpack" id="recentpack4">
                     <div class="card__top">
                         <img class="card__icon" src="images/SummerIconSmall.png" alt="summerpack"/>
                         <div class="card__packname">Summer Pack</div>
@@ -87,59 +88,59 @@
             
         </section>
         
-        <section class="container">
+        <section class="container" name="recentpuzzlesection">
             <h2>Continue puzzles</h2>
             <div class="card-grid">
-                <div class="card card-puzzle card-puzzle-easy">
+                <div class="card card-puzzle card-puzzle-easy" id="recentpuzzle1">
                     <div class="card__subtitle">Puzzle Size</div>
                     <img class="" src="images/SummerIconSmall.png" alt="summerpack"/>
                     <div class="card__count card__count--small">15x15</div>
                     <div class="card__streak card__streak--up">5%</div>
                 </div>
 
-                <div class="card card-puzzle card-puzzle-easy">
+                <div class="card card-puzzle card-puzzle-easy" id="recentpuzzle2">
                     <div class="card__subtitle">Puzzle Size</div>
                     <img class="" src="images/SummerIconSmall.png" alt="summerpack"/>
                     <div class="card__count card__count--small">15x15</div>
                     <div class="card__streak card__streak--up">5%</div>
                 </div>
 
-                <div class="card card-puzzle card-puzzle-medium">
+                <div class="card card-puzzle card-puzzle-medium" id="recentpuzzle3">
                     <div class="card__subtitle">Puzzle Size</div>
                     <img class="" src="images/SummerIconSmall.png" alt="summerpack"/>
                     <div class="card__count card__count--small">15x15</div>
                     <div class="card__streak card__streak--up">5%</div>
                 </div>
 
-                <div class="card card-puzzle card-puzzle-medium">
+                <div class="card card-puzzle card-puzzle-medium" id="recentpuzzle4">
                     <div class="card__subtitle">Puzzle Size</div>
                     <img class="" src="images/SummerIconSmall.png" alt="summerpack"/>
                     <div class="card__count card__count--small">15x15</div>
                     <div class="card__streak card__streak--up">5%</div>
                 </div>
 
-                <div class="card card-puzzle card-puzzle-hard">
+                <div class="card card-puzzle card-puzzle-hard" id="recentpuzzle5">
                     <div class="card__subtitle">Puzzle Size</div>
                     <img class="" src="images/SummerIconSmall.png" alt="summerpack"/>
                     <div class="card__count card__count--small">15x15</div>
                     <div class="card__streak card__streak--up">5%</div>
                 </div>
 
-                <div class="card card-puzzle card-puzzle-hard">
+                <div class="card card-puzzle card-puzzle-hard" id="recentpuzzle6">
                     <div class="card__subtitle">Puzzle Size</div>
                     <img class="" src="images/SummerIconSmall.png" alt="summerpack"/>
                     <div class="card__count card__count--small">15x15</div>
                     <div class="card__streak card__streak--up">5%</div>
                 </div>
 
-                <div class="card card-puzzle card-puzzle-veryhard">
+                <div class="card card-puzzle card-puzzle-veryhard" id="recentpuzzle7">
                     <div class="card__subtitle">Puzzle Size</div>
                     <img class="" src="images/SummerIconSmall.png" alt="summerpack"/>
                     <div class="card__count card__count--small">15x15</div>
                     <div class="card__streak card__streak--up">5%</div>
                 </div>
 
-                <div class="card card-puzzle card-puzzle-veryhard">
+                <div class="card card-puzzle card-puzzle-veryhard" id="recentpuzzle8">
                     <div class="card__subtitle">Puzzle Size</div>
                     <img class="" src="images/SummerIconSmall.png" alt="summerpack"/>
                     <div class="card__count card__count--small">15x15</div>
@@ -147,6 +148,72 @@
                 </div>
             </div>
             </div>
+        </section>
+
+        <section class="container">
+            <h2>All Packs</h2>
+            <div class="card-grid">
+                <div class="card card--springpack">
+                    <div class="card__top">
+                        <img class="card__icon" src="images/SpringIconSmall.png" alt="springpack"/>
+                        <div class="card__packname" name="packname">Spring Pack</div>
+                    </div>
+                    <div class="card__progress">
+                        <div class="card__count card__count--big" name="progress">0%</div>
+                        <div class="card__label">Completed</div>
+                    </div>
+                    <div class="card__streak card__streak--up" name="streak">0 Day Streak</div>
+                </div>
+    
+                <div class="card card--summerpack">
+                    <div class="card__top">
+                        <img class="card__icon" src="images/SummerIconSmall.png" alt="summerpack"/>
+                        <div class="card__packname">Summer Pack</div>
+                    </div>
+                    <div class="card__progress">
+                        <div class="card__count card__count--big">0%</div>
+                        <div class="card__label">Completed</div>
+                    </div>
+                    <div class="card__streak card__streak--up">0 Day Streak</div>
+                </div>
+    
+                <div class="card card--fallpack">
+                    <div class="card__top">
+                        <img class="card__icon" src="images/FallIconSmall.png" alt="fallpack"/>
+                        <div class="card__packname">Fall Pack</div>
+                    </div>
+                    <div class="card__progress">
+                        <div class="card__count card__count--big">0%</div>
+                        <div class="card__label">Completed</div>
+                    </div>
+                    <div class="card__streak card__streak--up">0 Day Streak</div>
+                </div>
+    
+                <div class="card card--winterpack">
+                    <div class="card__top">
+                        <img class="card__icon" src="images/WinterIconSmall.png" alt="winterpack"/>
+                        <div class="card__packname">Winter Pack</div>
+                    </div>
+                    <div class="card__progress">
+                        <div class="card__count card__count--big">0%</div>
+                        <div class="card__label">Completed</div>
+                    </div>
+                    <div class="card__streak card__streak--up">0 Day Streak</div>
+                </div>
+
+                <div class="card card--testpack">
+                    <div class="card__top">
+                        <img class="card__icon" src="images/TestIconSmall.png" alt="summerpack"/>
+                        <div class="card__packname">Test Pack</div>
+                    </div>
+                    <div class="card__progress">
+                        <div class="card__count card__count--big">0%</div>
+                        <div class="card__label">Completed</div>
+                    </div>
+                    <div class="card__streak card__streak--up">0 Day Streak</div>
+                </div>
+            </div>
+            
         </section>
 
     </main>

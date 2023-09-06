@@ -29,17 +29,21 @@
         background: var(--card-hover);
     }
 
-    &--pack1{
-        border-top: myrem(4) solid var(--testgradient-start);
+    &--testpack{
+        border-top: myrem(4) solid var(--testpack);
     }
-    &--pack2{
-        
+
+    &--springpack{
+        border-top: myrem(4) solid var(--springpack);
     }
-    &--pack3{
-        
+    &--summerpack{
+        border-top: myrem(4) solid var(--summerpack);
     }
-    &--pack4{
-        
+    &--fallpack{
+        border-top: myrem(4) solid var(--fallpack);
+    }
+    &--winterpack{
+        border-top: myrem(4) solid var(--winterpack);
     }
 
     &__top{

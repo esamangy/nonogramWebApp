@@ -50,11 +50,10 @@ function updateRecents(packname){
 
     let previous;
     if(recentpackdata[0] == packname){
-        console.log("theyre the same");
+        newrecentpacks[0] = packname;
         finishRecentPacks(1, newrecentpacks);
         return;
     } else {
-        console.log("theyre NOT the same");
         previous = recentpackdata[0];
         newrecentpacks[0] = packname;
     }
@@ -74,10 +73,10 @@ function updateRecents(packname){
 
 function finishRecentPacks(i, newpacks){
     for(let x = i; x < recentpackdata.length; x ++){
-        if(recentpackdata[i] != undefined){
-            newpacks[i] = recentpackdata[i];
+        if(recentpackdata[x] != 'undefined'){
+            newpacks[x] = recentpackdata[x];
         } else {
-            newpacks[i] = undefined;
+            newpacks[x] = 'undefined';
         }
     }
 }

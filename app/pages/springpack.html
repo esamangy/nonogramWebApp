@@ -11,12 +11,40 @@
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;700&display=swap" rel="stylesheet">
 
     <link rel="stylesheet" href="../../dist/style.css">
-
-    <script  src="../../dist/globals.js"></script>
+    <script src="../../dist/globals.js"></script>
+    <script defer src="../../dist/darkmode.js"></script>
     <script defer src="../../dist/packload.js"></script>
 </head>
+
 <body onload="springLoad()">
-    <h1>Hello</h1>
-    <a href="../../index.html">back</a>
+    <header class="header container">
+
+        <div class="header__title">
+            <h1>Nomogram Puzzels</h1>
+            <span class="header__subtitle">Completed Puzzels: 0</span>
+        </div>
+
+        <fieldset class="header__toggle toggle" aria-label="theme toggle" role="radiogroup">
+            <label for="dark">Dark Mode <span class="visually-hidden">On</span></label>
+            <div class="toggle__wrapper">
+                <input type="radio" name="theme" id="dark">
+                <input type="radio" name="theme" id="light">
+                <span aria-hidden="true" class="toggle__background"></span>
+                <span aria-hidden="true" class="toggle__button"></span>
+            </div>
+            <label for="light" class="visually-hidden">Dark Mode Off</label>
+        </fieldset>
+    </header>
+    <div class=" header container">
+            <h2>Spring Pack</h2>
+            <a href="../../index.html">
+                <div class="back-button back-button__label">Back</div>
+            </a>
+    </div>
+    <main>
+        <section class="container" name="puzzlecontainer">
+            
+        </section>
+    </main>
 </body>
 </html>

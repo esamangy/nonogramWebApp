@@ -1,0 +1,25 @@
+@use '../util' as *;
+
+.back-button{
+    position: relative;
+    overflow: hidden;
+    background: var(--card-color);
+    color: var(--text1-color);
+    text-align: center;
+    padding: myrem(12);
+    border-radius: myrem(5);
+    transition: background 150ms ease-in-out;
+    cursor: pointer;
+
+    &:hover{
+        background: var(--card-hover);
+    }
+
+    &__label{
+        font-size: myrem(14);
+        color: var(--text2-color);
+        font-weight: normal;
+        text-transform: uppercase;
+        padding: myrem(10) myrem(20);
+    }
+}
